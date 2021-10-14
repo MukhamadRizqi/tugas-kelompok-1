@@ -1,36 +1,46 @@
-nim = input("Masukan nim: ")
-nama = input("Masukan nama: ")
-kelas = input("Masukan kelas: ")
-Matakuliah = input("Masukan matakuliah: ")
-nilaiabsen = int(input("Masukan nilai absen : "))
-nilaitugas1 = int(input("Masukan nilai tugas 1 : "))
-nilaitugas2 = int(input("Masukan nilai tugas 2 : "))
-nilaiuts = int(input("Masukan nilai uts : "))
-nilaiuas = int(input("Masukan nilai uas : "))
-nilai=("nilaiabsen : ")+("nilaitugas1 : ")+("nilaitugas2 : ")+("nilaiuts : ")+("nilaiuas : ")
+"""
+Nama : Mukmanad Rizqi
+Nim  : 17210596
+Kelas: 17.1C.12
+"""
 
-print("nim :" +(nim))
-print("nama :" +(nama))
-print("kelas :" +(kelas))
-print("Matakuliah :" +(Matakuliah))
-print("nilai absen :" +str(float(1/20))+'%')
-print("nilai tugas 1 :" +str(float(1/10))+'%')
-print("nilai tugas 2 :" +str(float(1/10))+'%')
-print("nilai uts : " +str(float(1/30))+'%')
-print("nilai uas : " +str(float(1/30))+'%')
+#Input
+Nama        = input("Masukan nama anda                 : ")
+Nim         = input("Masukan nim anda                  : ")
+Kelas       = input("Masukan kelas anda                : ")
+Matakuliah  = input("masukan matakuliah anda           : ")
+nilaiabsen  = int(input("masukan nilai absen anda          : "))
+nilaitugas1 = int(input("masukan nilai tugas 1 anda        : "))
+nilaitugas2 = int(input("masukan nulai tugas 2 anda        : "))
+nilaiuts    = int(input("masukan nilai uts anda            : "))
+nilaiuas    = int(input("masukan nilai uas anda            : "))
 
+print("<><><><><><><><><><><><><><><><><>")
 
-nilai = int(input("Masukan nilai anda :"))
+#Proses
+nilaiakhir = nilaiabsen * 0.20 + nilaitugas1 * 0.10 +\
+nilaitugas2 * 0.10 + nilaiuts * 0.30 + nilaiuas * 0.30
 
-if(nilai>=80):
-    print("Grade A")
-    print("Selamat Anda LULUS")
-elif(nilai>=70):
-    print("Grade B")
-    print("Selamat Anda LULUS")
-elif(nilai>=60):
-    print("Grade C")
-    print("Anda Belum LULUS")
+#Output
+print("Nama          :"+str(Nama))
+print("Nim           :"+str(Nim))
+print("Kelas         :"+str(Kelas))
+print("Matakuliah    :"+str(Matakuliah))
+
+if nilaiakhir >= 85:
+    print("GRADE A")
+    print("SELAMAT ANDA LULUS")
+
+elif nilaiakhir >= 75:
+    print("GRADE B")
+    print("SELAMAT ANDA LULUS")
+
+elif nilaiakhir >= 65:
+    print("GRADE C")
+    print("SELAMAT ANDA LULUS")
 else:
-    print("Grade D")
-    print("Nilai Anda Jelek") 
+    print("GRADE D")
+    print("ANDA BELUM LULUS")
+
+print("<><><><><><><><><><><><><><><><><>")
+print("TOTAL NILAI KESELURUHAN = "+str(nilaiakhir))
